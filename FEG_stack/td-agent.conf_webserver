@@ -1,0 +1,26 @@
+# /etc/td-agent/td-agent.conf # Webserver
+<source>
+  type tail 				
+  format apache 			
+  tag ws01-apache.access 	
+  path /var/log/httpd/access_log  
+  pos_file /var/log/td-agent/httpd-access_log.pos 
+</source>
+
+<match ws01-apache.access>
+  type copy
+  <store>
+    type stdout 		
+  </store>
+
+  <store>
+    type forward 			
+    buffer_chunk_limit 256m
+    buffer_queue_limit 128
+    flush_interval 5s
+    <server>
+      host 172.16.123.147  # IP del server donde está el elasticsearch
+      port 24224		
+    </server>
+  </store>
+</match>

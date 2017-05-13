@@ -1,0 +1,23 @@
+# /etc/td-agent/td-agent.conf  # td-agent Aggregator
+
+<source>
+ type forward
+ port 24224
+</source>
+
+<match *.access> 
+   type copy
+ <store>
+   type stdout
+ </store>
+ <store>
+   type elasticsearch
+   host 172.16.123.147  # localhost o IP donde esta el elasticsearch
+   port 9200	# Puerto del elastic
+   flush_interval 10s
+   type_name access_log
+   logstash_format true
+   logstash_prefix apache
+   logstash_dateformat %Y.%m.%d
+ </store>
+</match>

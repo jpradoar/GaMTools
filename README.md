@@ -2,3 +2,11 @@
 
 - ELK stac = Elasticsearch + Logstash + Kibana
 - FEG stack = Fluentd + Elasticsearch + Grafana
+
+
+<p align="center">
+ 
+  <img src="https://github.com/jpradoar/GaMTools/blob/master/elk.png"/><br>
+  <img src="https://github.com/jpradoar/GaMTools/blob/master/fluentd-logo.png"/>
+  <img src="https://github.com/jpradoar/GaMTools/blob/master/grafana.png"/>
+</p>
