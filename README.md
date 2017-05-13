@@ -1,2 +1,4 @@
-# GaMTools
-Graphical and Monitoring Tools = ELK stack &amp; FEG stack
+# GaMTools: Graphical and Monitoring Tools
+
+- ELK stac = Elasticsearch + Logstash + Kibana
+- FEG stack = Fluentd + Elasticsearch + Grafana
