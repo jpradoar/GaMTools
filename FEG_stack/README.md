@@ -325,14 +325,14 @@ def tiempo():
 	os.system(comando)
 	print comando
 	tiempo()
-# EOF
+ # EOF
 </pre>
 
 
 
 # <div align="center" >REAL CASES  :)  </div>
 
-# <div align="center" >GRAFICO Y REQUEST</div>
+# <div align="center" >GRAPHIC Y REQUEST</div>
 
 
 <p align="center">
@@ -341,7 +341,7 @@ def tiempo():
 
 
 
-# <div align="center" >DASHBOARD SQUID-PROXY</div>
+# <div align="center" >DASHBOARD</div>
 
 
 <p align="center">
