@@ -9,14 +9,10 @@
 	HDD: 	8Gb
 	All servers are Debian
 
-# Logstash package
-	https://artifacts.elastic.co/downloads/logstash/logstash-5.3.2.deb
-
-# Elasticsearch package
-	https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.2.deb
-
-# Kibana package
- 	https://artifacts.elastic.co/downloads/kibana/kibana-5.3.2-amd64.deb
+# Packages
+	- Logstash: 		https://artifacts.elastic.co/downloads/logstash/logstash-5.3.2.deb
+	- Elasticsearch: 	https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.2.deb
+	- Kibana package: 	https://artifacts.elastic.co/downloads/kibana/kibana-5.3.2-amd64.deb
 
 
 
@@ -161,11 +157,11 @@
 
 
 # Cosas que modifique en elasticsearch.yml
-	cat /etc/elasticsearch/elasticsearch.yml | grep -v "#"
-		cluster.name: ElasticsearchSrv
-		path.data: /var/lib/elasticsearch 
-		network.host: 0.0.0.0 
-		http.port: 9200
+	sed -i 's/#path.data: \/path\/to\/data/path.data: \/var\/lib\/elasticsearch /g' /etc/elasticsearch/elasticsearch.yml
+	sed -i 's/#network.host: 192.168.0.1/network.host: 0.0.0.0/g' /etc/elasticsearch/elasticsearch.yml
+	sed -i 's/#http.port: 9200/http.port: 9200/g' /etc/elasticsearch/elasticsearch.yml
+	sed -i 's/#cluster.name: my-application/cluster.name: elastic/g' /etc/elasticsearch/elasticsearch.yml
+
 
 
 # Ver indices
@@ -203,11 +199,10 @@ para que genere un request (y genere info en el log).   Dicho esto acceder al el
 
 
 # Cosas que modifique en kibana.yml
-	cat /etc/kibana/kibana.yml |grep -v "#"
-		server.host: 0.0.0.0
-		server.name: "kibana"
-		elasticsearch.url: "http://192.168.2.138:9200"
-
+	sed -i 's/#server.host: "localhost"/server.host: 0.0.0.0/g' /etc/kibana/kibana.yml
+	sed -i 's/#server.name: "your-hostname"/server.name: "kibana"/g' /etc/kibana/kibana.yml
+	# elasticsearch.url: "http://IP_del_elasticsearch:9200"
+	echo "elasticsearch.url: 'http://99.99.99.101:9200' ">>/etc/kibana/kibana.yml
 
 
 # Agregar el index
