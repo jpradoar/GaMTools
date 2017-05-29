@@ -220,3 +220,9 @@ para que genere un request (y genere info en el log).   Dicho esto acceder al el
 <p align="center">
   <img src="kibana01.png"/><br>
 </p>
+
+
+# Visualización
+<p align="center">
+  <img src="kibana02.png"/><br>
+</p>
