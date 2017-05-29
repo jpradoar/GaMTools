@@ -9,8 +9,6 @@
 	HDD: 	8Gb
 	All servers are Debian
 
-
-
 # Logstash package
 	https://artifacts.elastic.co/downloads/logstash/logstash-5.3.2.deb
 
@@ -21,6 +19,8 @@
  	https://artifacts.elastic.co/downloads/kibana/kibana-5.3.2-amd64.deb
 
 
+
+<hr>
 
 # WEBSERVER - 192.168.2.136 
 
@@ -56,9 +56,6 @@
 		Setting up logstash (1:5.3.2-1) ...
 		Using provided startup.options file: /etc/logstash/startup.options
 		Successfully created system startup script for Logstash
-
-
-
 
 
 
@@ -129,6 +126,14 @@
 	}
 
 
+
+
+
+<hr>
+
+
+
+
 # ELASTICSEARCH - 192.168.2.138
 
 
@@ -175,9 +180,7 @@ para que genere un request (y genere info en el log).   Dicho esto acceder al el
 
 
 
-
-
-
+<hr>
 
 
 
@@ -207,15 +210,6 @@ para que genere un request (y genere info en el log).   Dicho esto acceder al el
 
 
 
-
-# Falta terminar...
-	En el repo hay un script básico en python que genera falsos request de http para probar los graficos en kibana
-	la forma de uso es la siguiente.
-	- Descargar el script 
-	- Asignarle permisos de ejecucion   chmod +x GenerateRequest.py
-	- Ejecutar el script  ./GenerateRequest.py
-	- Ver logs en apache / elastic / kibana
-
 # Agregar el index
 <p align="center">
   <img src="kibana01.png"/><br>
@@ -226,3 +220,13 @@ para que genere un request (y genere info en el log).   Dicho esto acceder al el
 <p align="center">
   <img src="kibana02.png"/><br>
 </p>
+
+
+
+# Falta terminar...
+	En el repo hay un script básico en python que genera falsos request de http para probar los graficos en kibana
+	la forma de uso es la siguiente.
+	- Descargar el script 
+	- Asignarle permisos de ejecucion   chmod +x GenerateRequest.py
+	- Ejecutar el script  ./GenerateRequest.py
+	- Ver logs en apache / elastic / kibana
