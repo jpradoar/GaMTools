@@ -163,6 +163,24 @@
 		http.port: 9200
 
 
+# Ver indices
+Una vez que está configurado logstash en el webserver, debemos acceder al mismo http://
+para que genere un request (y genere info en el log).   Dicho esto acceder al elasticsearch y ver los indices creados con el siguiente comando:
+
+	curl 'localhost:9200/_cat/indices?v'
+	health status index             uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+	yellow open   apache-2017.05.29 i4Gt6GiCRL-V7E7JRZgvUg   5   1          9            0    119.3kb        119.3kb
+
+
+
+
+
+
+
+
+
+
+
 # KIBANA 
 
 # Instalo
@@ -198,8 +216,7 @@
 	- Ejecutar el script  ./GenerateRequest.py
 	- Ver logs en apache / elastic / kibana
 
-
-
+# Agregar el index
 <p align="center">
-  <img src="kibana-config.png"/><br>
+  <img src="kibana01.png"/><br>
 </p>
