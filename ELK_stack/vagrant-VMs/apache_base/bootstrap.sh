@@ -1,8 +1,3 @@
-#!/bin/bash
-############################
-# Testing on: ubuntu-trusty-64 3.13.0-117-generic
-############################
-
 # update and upgrade system
 apt-get update
 apt-get upgrade -y 
