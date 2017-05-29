@@ -200,7 +200,7 @@ That said, access the elasticsearch and view the indexes created with the follow
 	sed -i 's/#server.host: "localhost"/server.host: 0.0.0.0/g' /etc/kibana/kibana.yml
 
 
-#I modified this parameters of file /etc/kibana/kibana.yml
+# I modified this parameters of file /etc/kibana/kibana.yml
 	sed -i 's/#server.host: "localhost"/server.host: 0.0.0.0/g' /etc/kibana/kibana.yml
 	sed -i 's/#server.name: "your-hostname"/server.name: "kibana"/g' /etc/kibana/kibana.yml
 	# elasticsearch.url: "http://IP_del_elasticsearch:9200"
