@@ -1,9 +1,9 @@
 
 # GaMTools: Graphical and Monitoring Tools
 
+[ELK_stack => Logstash + Elasticsearch + Kibana](https://github.com/jpradoar/GaMTools/tree/master/ELK_stack/)
 
-- [ELK_stack] => (Elasticsearch + Logstash + Kibana)
-- [FEG_stack] => (Fluentd + Elasticsearch + Grafana)
+[FEG_stack => Fluentd + Elasticsearch + Grafana](https://github.com/jpradoar/GaMTools/tree/master/FEG_stack/)
 
 
 <p align="center">
