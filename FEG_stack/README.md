@@ -341,7 +341,7 @@ def tiempo():
 
 
 
-# <div align="center" >DASHBOARD</div>
+# <div align="center" >SQUID PROXY DASHBOARD</div>
 
 
 <p align="center">
